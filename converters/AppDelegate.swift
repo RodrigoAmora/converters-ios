@@ -11,10 +11,15 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    enum AppShortCutKey:String{
+        case cartKey = "cartselection"
+    }
 
+    var launchedShortcutItem: UIApplicationShortcutItem?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.setupAppShortCut(application, launchOptions: launchOptions)
         return true
     }
 
@@ -23,15 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
+        
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -76,6 +82,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func setupAppShortCut(_ application: UIApplication,launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+            launchedShortcutItem = shortcutItem
+        }
+           
+        if let shortcutItems = application.shortcutItems, shortcutItems.isEmpty {
+            let icon1 = UIApplicationShortcutIcon(systemImageName: "ic_temperature")
+            let item1 = UIApplicationShortcutItem(type: AppShortCutKey.cartKey.rawValue, localizedTitle: "Temperatura", localizedSubtitle: "", icon: icon1, userInfo: nil)
+           
+           UIApplication.shared.shortcutItems = [item1]
+       }
+    }
 
 }
 
+extension AppDelegate{
+    func handleShortCutItem(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
+        var handled = false
+        
+        guard let shortCutType = shortcutItem.type as String? else { return false }
+        
+       
+        
+        switch shortCutType {
+            case AppShortCutKey.cartKey.rawValue:
+                handled = true
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "shortcutsearchtap"), object: nil, userInfo: nil)
+                break
+            
+            default:
+                break
+        }
+        
+        
+        return handled
+    }
+    
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        let handledShortCutItem = handleShortCutItem(shortcutItem)
+        completionHandler(handledShortCutItem)
+    }
+    
+}
