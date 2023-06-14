@@ -12,7 +12,7 @@ class TemperatureService {
         return ((temperature - 32)*5)/9
     }
     
-    func celisusToFahrenheit(temperature: Double?) -> Double {
-        return (temperature! * 9/5) + 32
+    func celisusToFahrenheit(temperature: Double) -> Double {
+        return (temperature * 9/5) + 32
     }
 }
