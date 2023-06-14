@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220156F2A3988F000D4C037 /* TemperatureService.swift */; };
 		D26211C72A2E9A5E0095831F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211C62A2E9A5E0095831F /* AppDelegate.swift */; };
 		D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211C82A2E9A5E0095831F /* SceneDelegate.swift */; };
 		D26211CB2A2E9A5E0095831F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211CA2A2E9A5E0095831F /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D220156F2A3988F000D4C037 /* TemperatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureService.swift; sourceTree = "<group>"; };
 		D26211C32A2E9A5E0095831F /* converters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = converters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26211C62A2E9A5E0095831F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26211C82A2E9A5E0095831F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D220156C2A39889B00D4C037 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D26211CA2A2E9A5E0095831F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D220156D2A3988B600D4C037 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D26211CC2A2E9A5E0095831F /* Main.storyboard */,
+				D26211D42A2E9A5E0095831F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D220156E2A3988C900D4C037 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D220156F2A3988F000D4C037 /* TemperatureService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D26211BA2A2E9A5E0095831F = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +128,12 @@
 		D26211C52A2E9A5E0095831F /* converters */ = {
 			isa = PBXGroup;
 			children = (
+				D220156E2A3988C900D4C037 /* Services */,
+				D220156D2A3988B600D4C037 /* Views */,
+				D220156C2A39889B00D4C037 /* Controllers */,
 				D26211C62A2E9A5E0095831F /* AppDelegate.swift */,
 				D26211C82A2E9A5E0095831F /* SceneDelegate.swift */,
-				D26211CA2A2E9A5E0095831F /* ViewController.swift */,
-				D26211CC2A2E9A5E0095831F /* Main.storyboard */,
 				D26211D22A2E9A5E0095831F /* Assets.xcassets */,
-				D26211D42A2E9A5E0095831F /* LaunchScreen.storyboard */,
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D26211CF2A2E9A5E0095831F /* converters.xcdatamodeld */,
 			);
@@ -263,6 +290,7 @@
 			files = (
 				D26211CB2A2E9A5E0095831F /* ViewController.swift in Sources */,
 				D26211C72A2E9A5E0095831F /* AppDelegate.swift in Sources */,
+				D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */,
 				D26211D12A2E9A5E0095831F /* converters.xcdatamodeld in Sources */,
 				D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */,
 			);
