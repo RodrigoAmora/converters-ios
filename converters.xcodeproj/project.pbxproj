@@ -18,6 +18,9 @@
 		D26211E12A2E9A5E0095831F /* convertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211E02A2E9A5E0095831F /* convertersTests.swift */; };
 		D26211EB2A2E9A5E0095831F /* convertersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211EA2A2E9A5E0095831F /* convertersUITests.swift */; };
 		D26211ED2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */; };
+		D2FBF0062A455A760048C166 /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF0052A455A760048C166 /* DistanceViewController.xib */; };
+		D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBF0072A455AB40048C166 /* DistanceViewController.swift */; };
+		D2FBF0092A455AFD0048C166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF00B2A455AFD0048C166 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		D26211E62A2E9A5E0095831F /* convertersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = convertersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26211EA2A2E9A5E0095831F /* convertersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITests.swift; sourceTree = "<group>"; };
 		D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2FBF0052A455A760048C166 /* DistanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
+		D2FBF0072A455AB40048C166 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		D2FBF00A2A455AFD0048C166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D26211CA2A2E9A5E0095831F /* ViewController.swift */,
+				D2FBF0072A455AB40048C166 /* DistanceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 			children = (
 				D26211CC2A2E9A5E0095831F /* Main.storyboard */,
 				D26211D42A2E9A5E0095831F /* LaunchScreen.storyboard */,
+				D2FBF0052A455A760048C166 /* DistanceViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 				D26211D22A2E9A5E0095831F /* Assets.xcassets */,
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D26211CF2A2E9A5E0095831F /* converters.xcdatamodeld */,
+				D2FBF00B2A455AFD0048C166 /* Localizable.strings */,
 			);
 			path = converters;
 			sourceTree = "<group>";
@@ -262,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26211D62A2E9A5E0095831F /* LaunchScreen.storyboard in Resources */,
+				D2FBF0092A455AFD0048C166 /* Localizable.strings in Resources */,
+				D2FBF0062A455A760048C166 /* DistanceViewController.xib in Resources */,
 				D26211D32A2E9A5E0095831F /* Assets.xcassets in Resources */,
 				D26211CE2A2E9A5E0095831F /* Main.storyboard in Resources */,
 			);
@@ -293,6 +304,7 @@
 				D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */,
 				D26211D12A2E9A5E0095831F /* converters.xcdatamodeld in Sources */,
 				D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */,
+				D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +355,14 @@
 				D26211D52A2E9A5E0095831F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D2FBF00B2A455AFD0048C166 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2FBF00A2A455AFD0048C166 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -477,7 +497,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +526,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

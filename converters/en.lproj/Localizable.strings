@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  converters
+
+  Created by Rodrigo Amora on 23/06/23.
+  
+*/
+"celsius_to_fahrenheit" = "Celsius to Fahrenheit";
+"fahrenheit_to_celsius" = "Fahrenheit to Celsius";
+
+"convert_temperature" = "Convert temperature";
+"type_temperature" = "Type temperature....";
