@@ -8,11 +8,11 @@
 import Foundation
 
 class TemperatureService {
-    func fahrenheitToCelsius(temperature: Double) -> Double {
+    class func fahrenheitToCelsius(temperature: Double) -> Double {
         return ((temperature - 32)*5)/9
     }
     
-    func celisusToFahrenheit(temperature: Double) -> Double {
+    class func celisusToFahrenheit(temperature: Double) -> Double {
         return (temperature * 9/5) + 32
     }
 }
