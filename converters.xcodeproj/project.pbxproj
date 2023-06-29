@@ -22,6 +22,8 @@
 		D26211E12A2E9A5E0095831F /* convertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211E02A2E9A5E0095831F /* convertersTests.swift */; };
 		D26211EB2A2E9A5E0095831F /* convertersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211EA2A2E9A5E0095831F /* convertersUITests.swift */; };
 		D26211ED2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */; };
+		D29099B02A4D5EAD00C14F34 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */; };
+		D29099B42A4D5F6D00C14F34 /* TemperatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */; };
 		D2FBF0062A455A760048C166 /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF0052A455A760048C166 /* DistanceViewController.xib */; };
 		D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBF0072A455AB40048C166 /* DistanceViewController.swift */; };
 		D2FBF0092A455AFD0048C166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF00B2A455AFD0048C166 /* Localizable.strings */; };
@@ -68,6 +70,8 @@
 		D26211E62A2E9A5E0095831F /* convertersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = convertersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26211EA2A2E9A5E0095831F /* convertersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITests.swift; sourceTree = "<group>"; };
 		D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemperatureViewController.xib; sourceTree = "<group>"; };
 		D2FBF0052A455A760048C166 /* DistanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
 		D2FBF0072A455AB40048C166 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		D2FBF00A2A455AFD0048C166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			children = (
 				D26211CA2A2E9A5E0095831F /* ViewController.swift */,
 				D2FBF0072A455AB40048C166 /* DistanceViewController.swift */,
+				D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				D26211CC2A2E9A5E0095831F /* Main.storyboard */,
 				D26211D42A2E9A5E0095831F /* LaunchScreen.storyboard */,
 				D2FBF0052A455A760048C166 /* DistanceViewController.xib */,
+				D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,7 +212,6 @@
 				BAA0161A1609276550713AA6 /* Pods-convertersTests.debug.xcconfig */,
 				3FF689E26824F62BB40FE9F8 /* Pods-convertersTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -320,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26211D62A2E9A5E0095831F /* LaunchScreen.storyboard in Resources */,
+				D29099B42A4D5F6D00C14F34 /* TemperatureViewController.xib in Resources */,
 				D2FBF0092A455AFD0048C166 /* Localizable.strings in Resources */,
 				D2FBF0062A455A760048C166 /* DistanceViewController.xib in Resources */,
 				D26211D32A2E9A5E0095831F /* Assets.xcassets in Resources */,
@@ -456,6 +462,7 @@
 				D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */,
 				D26211D12A2E9A5E0095831F /* converters.xcdatamodeld in Sources */,
 				D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */,
+				D29099B02A4D5EAD00C14F34 /* TemperatureViewController.swift in Sources */,
 				D2148F9F2A4D50D4008941C0 /* DistanceService.swift in Sources */,
 				D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */,
 			);
