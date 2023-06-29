@@ -1,0 +1,6 @@
+framework module Pods_convertersTests {
+  umbrella header "Pods-convertersTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

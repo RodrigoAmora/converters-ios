@@ -1,0 +1,16 @@
+PODS:
+  - Sheeeeeeeeet (3.2.2)
+
+DEPENDENCIES:
+  - Sheeeeeeeeet
+
+SPEC REPOS:
+  trunk:
+    - Sheeeeeeeeet
+
+SPEC CHECKSUMS:
+  Sheeeeeeeeet: 6e9f9b1270fe14986fc3ccd9e878dca7d53dcebe
+
+PODFILE CHECKSUM: 7fc03c8778d7757446f4a8dfa3c47df9fc91f854
+
+COCOAPODS: 1.12.1
