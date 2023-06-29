@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2148F9F2A4D50D4008941C0 /* DistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2148F9E2A4D50D4008941C0 /* DistanceService.swift */; };
 		D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220156F2A3988F000D4C037 /* TemperatureService.swift */; };
 		D26211C72A2E9A5E0095831F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211C62A2E9A5E0095831F /* AppDelegate.swift */; };
 		D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211C82A2E9A5E0095831F /* SceneDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2148F9E2A4D50D4008941C0 /* DistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceService.swift; sourceTree = "<group>"; };
 		D220156F2A3988F000D4C037 /* TemperatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureService.swift; sourceTree = "<group>"; };
 		D26211C32A2E9A5E0095831F /* converters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = converters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26211C62A2E9A5E0095831F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D220156F2A3988F000D4C037 /* TemperatureService.swift */,
+				D2148F9E2A4D50D4008941C0 /* DistanceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */,
 				D26211D12A2E9A5E0095831F /* converters.xcdatamodeld in Sources */,
 				D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */,
+				D2148F9F2A4D50D4008941C0 /* DistanceService.swift in Sources */,
 				D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
