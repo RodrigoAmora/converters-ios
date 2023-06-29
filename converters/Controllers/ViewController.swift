@@ -10,11 +10,13 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: - IBOutlets
+    @IBOutlet weak var btnAllocationType: UIBarButtonItem!
     @IBOutlet var lbAskTemperature: UILabel!
     @IBOutlet var inputTemperature: UITextField!
     @IBOutlet var lbResult: UILabel!
     @IBOutlet var btConvertTemperature: UIButton!
     @IBOutlet var pickerTemperature: UIPickerView!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
     let dataArray = [String(localized: "celsius_to_fahrenheit"), String(localized: "fahrenheit_to_celsius")]
@@ -22,7 +24,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        initViews()
+        self.initViews()
+        self.configureRightBarButtonItem()
     }
 
     // MARK: - UIPicker
@@ -40,7 +43,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     // MARK: - Methods
-    func initViews() {
+    private func initViews() {
         btConvertTemperature.titleLabel?.text = "OK"
         
         inputTemperature.placeholder = String(localized: "type_temperature")
@@ -49,6 +52,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         pickerTemperature.delegate = self as UIPickerViewDelegate
         pickerTemperature.dataSource = self as UIPickerViewDataSource
+    }
+    
+    private func configureRightBarButtonItem() {
+        let editProfile = UIAction(title: String(localized: "menu_edit_profile"), image: UIImage(systemName: "person.circle")) { _ in
+            print("ddd")
+            self.changeViewController(DistanceViewController())
+        }
+        
+        let logout = UIAction(title: String(localized: "menu_logout"), image: UIImage(systemName: "rectangle.portrait.and.arrow.right")) { _ in
+            //self.showToast(message: "Edit", seconds: 1.0)
+        }
+        
+        btnAllocationType.image = UIImage(systemName: "text.justify")
+        btnAllocationType.menu = UIMenu(title: "", children: [editProfile, logout])
+        
+        navBar.topItem?.title = String(localized: "app_name")
+        navBar.backgroundColor = UIColor.blue
+    }
+    
+    private func changeViewController(_ viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     // MARK: - IBActions
