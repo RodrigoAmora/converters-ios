@@ -5,8 +5,22 @@
   Created by Rodrigo Amora on 23/06/23.
   
 */
+"app_name" = "Converters";
+
+// MENU
+"menu_convert_temperatue" = "Convert temperature";
+"menu_convert_distance" = "Convert distance";
+
+// TEMPERATURE
 "celsius_to_fahrenheit" = "Celsius to Fahrenheit";
 "fahrenheit_to_celsius" = "Fahrenheit to Celsius";
 
 "convert_temperature" = "Convert temperature";
 "type_temperature" = "Type temperature....";
+
+// DISTANCE
+"kilometer_to_mile" = "Kilometer To Mile";
+"mile_to_kilometer" = "Mile To Kilometer";
+
+"convert_distance" = "Convert distance";
+"type_distance" = "Type distance....";
