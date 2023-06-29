@@ -9,19 +9,23 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    // MARK: - IBOutlets
     @IBOutlet var lbAskTemperature: UILabel!
     @IBOutlet var inputTemperature: UITextField!
     @IBOutlet var lbResult: UILabel!
     @IBOutlet var btConvertTemperature: UIButton!
     @IBOutlet var pickerTemperature: UIPickerView!
     
+    // MARK: - Atributes
     let dataArray = [String(localized: "celsius_to_fahrenheit"), String(localized: "fahrenheit_to_celsius")]
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
     }
 
+    // MARK: - UIPicker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -35,6 +39,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return row
     }
     
+    // MARK: - Methods
     func initViews() {
         btConvertTemperature.titleLabel?.text = "OK"
         
@@ -46,6 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerTemperature.dataSource = self as UIPickerViewDataSource
     }
     
+    // MARK: - IBActions
     @IBAction func convertTemperature() {
         let temperatureTyped = Double(inputTemperature.text ?? "0")
         var temperatureConverted: Double = 0;
