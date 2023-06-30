@@ -18,29 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let homeTabItem = UITabBarItem()
-        homeTabItem.title = "Inicio"
-        homeTabItem.image = UIImage(named: "icon-home")
-        
-        let temperatureViewController = TemperatureViewController()
-        temperatureViewController.tabBarItem = homeTabItem
-        
-        let reciboTabItem = UITabBarItem()
-        reciboTabItem.title = "Recibos"
-        reciboTabItem.image = UIImage(named: "icon-recept")
-        
-        let distanceViewController = DistanceViewController()
-        distanceViewController.tabBarItem = reciboTabItem
-        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [temperatureViewController, distanceViewController]
-        tabBarController.selectedViewController = temperatureViewController
-        
-        let navigationController = UINavigationController(rootViewController: tabBarController)
-        navigationController.navigationBar.isHidden = true
-        
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        self.createUITabBarItem()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -74,6 +52,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
+    private func createUITabBarItem() {
+        let temperatueTabItem = UITabBarItem()
+        temperatueTabItem.title = String(localized: "temperature")
+        temperatueTabItem.image = UIImage(named: "icon-home")
+        
+        let temperatureViewController = TemperatureViewController()
+        temperatureViewController.tabBarItem = temperatueTabItem
+        
+        let distanceTabItem = UITabBarItem()
+        distanceTabItem.title = String(localized: "distance")
+        distanceTabItem.image = UIImage(named: "icon-recept")
+        
+        let distanceViewController = DistanceViewController()
+        distanceViewController.tabBarItem = distanceTabItem
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [temperatureViewController, distanceViewController]
+        tabBarController.selectedViewController = temperatureViewController
+        
+        let navigationController = UINavigationController(rootViewController: tabBarController)
+        navigationController.navigationBar.isHidden = true
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
+    
 }
 
