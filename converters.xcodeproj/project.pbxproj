@@ -117,6 +117,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D21FA6AF2A4F19E8006921F9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D26211C62A2E9A5E0095831F /* AppDelegate.swift */,
+				D26211C82A2E9A5E0095831F /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		D220156C2A39889B00D4C037 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,11 +181,10 @@
 		D26211C52A2E9A5E0095831F /* converters */ = {
 			isa = PBXGroup;
 			children = (
+				D21FA6AF2A4F19E8006921F9 /* AppDelegate */,
 				D220156E2A3988C900D4C037 /* Services */,
 				D220156D2A3988B600D4C037 /* Views */,
 				D220156C2A39889B00D4C037 /* Controllers */,
-				D26211C62A2E9A5E0095831F /* AppDelegate.swift */,
-				D26211C82A2E9A5E0095831F /* SceneDelegate.swift */,
 				D26211D22A2E9A5E0095831F /* Assets.xcassets */,
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D26211CF2A2E9A5E0095831F /* converters.xcdatamodeld */,
