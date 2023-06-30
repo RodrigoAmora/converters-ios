@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DistanceViewController" customModule="converters" customModuleProvider="target">
             <connections>
                 <outlet property="btConvertDistance" destination="uhE-GP-GWm" id="sQk-wv-NGU"/>
-                <outlet property="btnAllocationType" destination="2vV-1l-2XN" id="y60-D0-JLW"/>
+                <outlet property="btRightMenu" destination="2vV-1l-2XN" id="lO7-zt-lVV"/>
                 <outlet property="inputDistance" destination="5Ay-fh-Quz" id="ZQm-lO-d5x"/>
                 <outlet property="lbAskDistance" destination="rGG-cm-hlJ" id="van-eh-7Wl"/>
                 <outlet property="lbResult" destination="ymt-nY-qvl" id="0T2-jJ-BDW"/>
@@ -60,7 +60,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5o-4J-eF9">
-                    <rect key="frame" x="5" y="59" width="393" height="44"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem title="Title" id="NYQ-9E-4Vd">
@@ -71,7 +71,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="76" y="-11"/>
+            <point key="canvasLocation" x="75.572519083969468" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
