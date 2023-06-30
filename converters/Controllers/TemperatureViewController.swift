@@ -12,11 +12,11 @@ class TemperatureViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
-    @IBOutlet var btConvertTemperature: UIButton!
-    @IBOutlet var inputTemperature: UITextField!
-    @IBOutlet var lbAskTemperature: UILabel!
-    @IBOutlet var lbResult: UILabel!
-    @IBOutlet var pickerTemperature: UIPickerView!
+    @IBOutlet weak var btConvertTemperature: UIButton!
+    @IBOutlet weak var inputTemperature: UITextField!
+    @IBOutlet weak var lbAskTemperature: UILabel!
+    @IBOutlet weak var lbResult: UILabel!
+    @IBOutlet weak var pickerTemperature: UIPickerView!
     @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
@@ -60,11 +60,11 @@ class TemperatureViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     private func configureRightBarButtonItem() {
         let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(systemName: "person.circle")) { _ in
-            self.changeViewController(TemperatureViewController())
+            self.changeViewController(0)
         }
         
         let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(systemName: "rectangle.portrait.and.arrow.right")) { _ in
-            self.changeViewController(DistanceViewController())
+            self.changeViewController(1)
         }
         
         btRightMenu.image = UIImage(systemName: "text.justify")
@@ -74,8 +74,9 @@ class TemperatureViewController: UIViewController, UIPickerViewDelegate, UIPicke
         navBar.backgroundColor = UIColor.blue
     }
     
-    private func changeViewController(_ viewController: UIViewController) {
-        self.navigationController?.pushViewController(viewController, animated: true)
+    private func changeViewController(_ selectedIndex: Int) {
+//        self.navigationController?.pushViewController(viewController, animated: true)
+        tabBarController?.selectedIndex = selectedIndex
     }
     
     // MARK: - IBActions
