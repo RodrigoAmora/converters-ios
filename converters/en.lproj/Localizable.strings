@@ -12,6 +12,8 @@
 "menu_convert_distance" = "Convert distance";
 
 // TEMPERATURE
+"temperature" = "Temperature";
+
 "celsius_to_fahrenheit" = "Celsius to Fahrenheit";
 "fahrenheit_to_celsius" = "Fahrenheit to Celsius";
 
@@ -19,6 +21,8 @@
 "type_temperature" = "Type temperature....";
 
 // DISTANCE
+"distance" = "Distance";
+
 "kilometer_to_mile" = "Kilometer To Mile";
 "mile_to_kilometer" = "Mile To Kilometer";
 
