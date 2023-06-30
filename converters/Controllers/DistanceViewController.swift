@@ -11,12 +11,12 @@ import UIKit
 class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var btnAllocationType: UIBarButtonItem!
-    @IBOutlet var lbAskDistance: UILabel!
-    @IBOutlet var inputDistance: UITextField!
-    @IBOutlet var lbResult: UILabel!
-    @IBOutlet var btConvertDistance: UIButton!
-    @IBOutlet var pickerDistance: UIPickerView!
+    @IBOutlet weak var btRightMenu: UIBarButtonItem!
+    @IBOutlet weak var lbAskDistance: UILabel!
+    @IBOutlet weak var inputDistance: UITextField!
+    @IBOutlet weak var lbResult: UILabel!
+    @IBOutlet weak var btConvertDistance: UIButton!
+    @IBOutlet weak var pickerDistance: UIPickerView!
     @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
@@ -25,7 +25,7 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        initViews()
+        self.initViews()
         self.configureRightBarButtonItem()
     }
     
@@ -44,7 +44,7 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     // MARK: - Methods
-    func initViews() {
+    private func initViews() {
         btConvertDistance.titleLabel?.text = "OK"
         
         inputDistance.placeholder = String(localized: "type_distance")
@@ -57,11 +57,11 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     private func configureRightBarButtonItem() {
         let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(systemName: "person.circle")) { _ in
-            self.changeViewController(TemperatureViewController())
+            self.changeViewController(0)
         }
         
         let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(systemName: "rectangle.portrait.and.arrow.right")) { _ in
-            self.changeViewController(DistanceViewController())
+            self.changeViewController(1)
         }
         
         btRightMenu.image = UIImage(systemName: "text.justify")
@@ -69,6 +69,11 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         navBar.topItem?.title = String(localized: "app_name")
         navBar.backgroundColor = UIColor.blue
+    }
+    
+    private func changeViewController(_ selectedIndex: Int) {
+//        self.navigationController?.pushViewController(viewController, animated: true)
+        tabBarController?.selectedIndex = selectedIndex
     }
     
     // MARK: - IBActions
