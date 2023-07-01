@@ -15,8 +15,8 @@
 "menu_convert_distance" = "Convert distance";
 
 // ERROR MESSAGE
-"distance_empty" = "Distance is empty!";
-"temperature_empty" = "Temperatue is empty!";
+"distance_empty" = "Distance field is empty!";
+"temperature_empty" = "Temperatue field is empty!";
 
 // TEMPERATURE
 "temperature" = "Temperature";
@@ -30,8 +30,8 @@
 // DISTANCE
 "distance" = "Distance";
 
-"kilometer_to_mile" = "Kilometer To Mile";
-"mile_to_kilometer" = "Mile To Kilometer";
+"kilometer_to_mile" = "Kilometer to Mile";
+"mile_to_kilometer" = "Mile to Kilometer";
 
 "convert_distance" = "Convert distance";
 "type_distance" = "Type distance....";

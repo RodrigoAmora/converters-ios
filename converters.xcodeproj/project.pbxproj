@@ -74,6 +74,7 @@
 		D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemperatureViewController.xib; sourceTree = "<group>"; };
+		D2ED5A772A50AAB4001F4EE0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D2FBF0052A455A760048C166 /* DistanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
 		D2FBF0072A455AB40048C166 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		D2FBF00A2A455AFD0048C166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = D26211BA2A2E9A5E0095831F;
 			productRefGroup = D26211C42A2E9A5E0095831F /* Products */;
@@ -533,6 +535,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D2FBF00A2A455AFD0048C166 /* en */,
+				D2ED5A772A50AAB4001F4EE0 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -604,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

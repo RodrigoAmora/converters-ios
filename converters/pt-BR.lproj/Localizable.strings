@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  converters
+
+  Created by Rodrigo Amora on 23/06/23.
+  
+*/
+"app_name" = "Converters";
+
+"btn_alert_view_positive" = "OK";
+"btn_alert_view_negative" = "Cancelar";
+
+// MENU
+"menu_convert_temperatue" = "Converter temperatura";
+"menu_convert_distance" = "Converter distância";
+
+// ERROR MESSAGE
+"distance_empty" = "O campo de distância está vazio!";
+"temperature_empty" = "O campo de temperatua está vazio!";
+
+// TEMPERATURE
+"temperature" = "Temperatura";
+
+"celsius_to_fahrenheit" = "Celsius to Fahrenheit";
+"fahrenheit_to_celsius" = "Fahrenheit to Celsius";
+
+"convert_temperature" = "Converter temperatura";
+"type_temperature" = "Digitar temperatura....";
+
+// DISTANCE
+"distance" = "Distância";
+
+"kilometer_to_mile" = "Quilômetro para Milha";
+"mile_to_kilometer" = "Milha para Quilômetro";
+
+"convert_distance" = "Converter distância";
+"type_distance" = "Digitar distância....";
