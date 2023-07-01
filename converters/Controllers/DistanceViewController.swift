@@ -57,11 +57,11 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     
     private func configureRightBarButtonItem() {
         let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(named: "ic_temperature")) { _ in
-            self.changeViewController(0)
+            self.changeTab(0)
         }
         
         let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(named: "ic_distance")) { _ in
-            self.changeViewController(1)
+            self.changeTab(1)
         }
         
         btRightMenu.image = UIImage(systemName: "text.justify")
@@ -69,11 +69,6 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         
         navBar.topItem?.title = String(localized: "app_name")
         navBar.backgroundColor = UIColor.blue
-    }
-    
-    private func changeViewController(_ selectedIndex: Int) {
-//        self.navigationController?.pushViewController(viewController, animated: true)
-        tabBarController?.selectedIndex = selectedIndex
     }
     
     // MARK: - IBActions

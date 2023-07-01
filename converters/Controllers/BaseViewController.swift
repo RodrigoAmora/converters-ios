@@ -10,6 +10,11 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    func changeTab(_ selectedIndex: Int) {
+//        self.navigationController?.pushViewController(viewController, animated: true)
+        tabBarController?.selectedIndex = selectedIndex
+    }
+    
     func showAlertController(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String(localized: "btn_alert_view_positive"), style: .default, handler: nil))
