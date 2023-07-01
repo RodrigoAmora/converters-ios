@@ -56,11 +56,11 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     private func configureRightBarButtonItem() {
-        let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(systemName: "person.circle")) { _ in
+        let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(named: "ic_temperature")) { _ in
             self.changeViewController(0)
         }
         
-        let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(systemName: "rectangle.portrait.and.arrow.right")) { _ in
+        let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(named: "ic_distance")) { _ in
             self.changeViewController(1)
         }
         
