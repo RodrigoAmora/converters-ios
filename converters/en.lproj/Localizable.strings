@@ -7,9 +7,16 @@
 */
 "app_name" = "Converters";
 
+"btn_alert_view_positive" = "OK";
+"btn_alert_view_negative" = "Cancel";
+
 // MENU
 "menu_convert_temperatue" = "Convert temperature";
 "menu_convert_distance" = "Convert distance";
+
+// ERROR MESSAGE
+"distance_empty" = "Distance is empty!";
+"temperature_empty" = "Temperatue is empty!";
 
 // TEMPERATURE
 "temperature" = "Temperature";

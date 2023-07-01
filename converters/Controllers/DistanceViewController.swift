@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
@@ -78,7 +78,13 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     // MARK: - IBActions
     @IBAction func convertTemperature() {
-        let distanceTyped = Double(inputDistance.text ?? "0")
+        let distance = inputDistance.text ?? ""
+        if (distance.isEmpty) {
+            showAlertController(title: "", message: String(localized: "distance_empty"))
+            return
+        }
+        
+        let distanceTyped = Double(distance)
         var distanceConverted: Double = 0;
         
         let a = pickerDistance.selectedRow(inComponent: 0)

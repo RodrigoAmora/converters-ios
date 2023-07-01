@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TemperatureViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
@@ -81,7 +81,13 @@ class TemperatureViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     // MARK: - IBActions
     @IBAction func convertTemperature() {
-        let temperatureTyped = Double(inputTemperature.text ?? "0")
+        let temperature = inputTemperature.text ?? ""
+        if (temperature.isEmpty) {
+            showAlertController(title: "", message: String(localized: "temperature_empty"))
+            return
+        }
+        
+        let temperatureTyped = Double(temperature)
         var temperatureConverted: Double = 0;
         
         let a = pickerTemperature.selectedRow(inComponent: 0)
