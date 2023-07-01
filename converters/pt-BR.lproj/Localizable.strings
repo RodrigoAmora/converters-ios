@@ -21,8 +21,8 @@
 // TEMPERATURE
 "temperature" = "Temperatura";
 
-"celsius_to_fahrenheit" = "Celsius to Fahrenheit";
-"fahrenheit_to_celsius" = "Fahrenheit to Celsius";
+"celsius_to_fahrenheit" = "Celsius para Fahrenheit";
+"fahrenheit_to_celsius" = "Fahrenheit para Celsius";
 
 "convert_temperature" = "Converter temperatura";
 "type_temperature" = "Digitar temperatura....";
