@@ -11,8 +11,9 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    enum AppShortCutKey:String{
-        case cartKey = "cartselection"
+    enum AppShortCutKey: String{
+        case temperatureKey = "temperatureKey"
+        case distanceKey = "distanceKey"
     }
 
     var launchedShortcutItem: UIApplicationShortcutItem?
@@ -83,16 +84,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func setupAppShortCut(_ application: UIApplication,launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+    func setupAppShortCut(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             launchedShortcutItem = shortcutItem
         }
            
         if let shortcutItems = application.shortcutItems, shortcutItems.isEmpty {
-            let icon1 = UIApplicationShortcutIcon(systemImageName: "ic_temperature")
-            let item1 = UIApplicationShortcutItem(type: AppShortCutKey.cartKey.rawValue, localizedTitle: "Temperatura", localizedSubtitle: "", icon: icon1, userInfo: nil)
+            let iconTemperature = UIApplicationShortcutIcon(templateImageName: "ic_temperature")
+            let itemTemperature = UIApplicationShortcutItem(type: AppShortCutKey.temperatureKey.rawValue, localizedTitle: String(localized: "temperature"), localizedSubtitle: "", icon: iconTemperature, userInfo: nil)
            
-           UIApplication.shared.shortcutItems = [item1]
+            let iconDistance = UIApplicationShortcutIcon(templateImageName: "ic_distance")
+            let itemDistance = UIApplicationShortcutItem(type: AppShortCutKey.distanceKey.rawValue, localizedTitle: String(localized: "distance"), localizedSubtitle: "", icon: iconDistance, userInfo: nil)
+            
+           UIApplication.shared.shortcutItems = [itemTemperature, itemDistance]
        }
     }
 
@@ -101,13 +105,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate{
     func handleShortCutItem(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         var handled = false
-        
         guard let shortCutType = shortcutItem.type as String? else { return false }
         
-       
-        
         switch shortCutType {
-            case AppShortCutKey.cartKey.rawValue:
+            case AppShortCutKey.temperatureKey.rawValue:
                 handled = true
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "shortcutsearchtap"), object: nil, userInfo: nil)
                 break
