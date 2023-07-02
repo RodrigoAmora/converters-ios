@@ -45,7 +45,7 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     
     // MARK: - Methods
     private func initViews() {
-        btConvertDistance.titleLabel?.text = "OK"
+        btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
         
         inputDistance.placeholder = String(localized: "type_distance")
         lbAskDistance.text = String(localized: "convert_distance")
@@ -96,7 +96,7 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
                 break
         }
         
-        lbResult.text = String(distanceConverted)
+        lbResult.text = String(format: "%.2f", distanceConverted)
     }
     
 }

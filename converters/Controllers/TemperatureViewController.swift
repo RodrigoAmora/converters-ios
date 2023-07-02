@@ -48,7 +48,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     
     // MARK: - Methods
     private func initViews() {
-        btConvertTemperature.titleLabel?.text = "OK"
+        btConvertTemperature.setTitle(String(localized: "btn_convert_temperature"), for: .normal)
         
         inputTemperature.placeholder = String(localized: "type_temperature")
         lbAskTemperature.text = String(localized: "convert_temperature")
@@ -99,7 +99,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
             break
         }
         
-        lbResult.text = String(temperatureConverted)
+        lbResult.text = String(format: "%.2f", temperatureConverted)
     }
     
 }
