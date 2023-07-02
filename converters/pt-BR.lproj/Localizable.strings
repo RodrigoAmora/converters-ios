@@ -24,6 +24,7 @@
 "celsius_to_fahrenheit" = "Celsius para Fahrenheit";
 "fahrenheit_to_celsius" = "Fahrenheit para Celsius";
 
+"btn_convert_temperature" = "Converter";
 "convert_temperature" = "Converter temperatura";
 "type_temperature" = "Digitar temperatura....";
 
@@ -33,5 +34,6 @@
 "kilometer_to_mile" = "Quilômetro para Milha";
 "mile_to_kilometer" = "Milha para Quilômetro";
 
+"btn_convert_distance" = "Converter";
 "convert_distance" = "Converter distância";
 "type_distance" = "Digitar distância....";
