@@ -80,10 +80,10 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         }
         
         let distanceTyped = Double(distance)
-        var distanceConverted: Double = 0;
+        var distanceConverted: String = ""
         
-        let a = pickerDistance.selectedRow(inComponent: 0)
-        switch a {
+        let index = pickerDistance.selectedRow(inComponent: 0)
+        switch index {
             case 0:
                 distanceConverted = DistanceService.kilometerToMile(distanceTyped ?? 0)
                 break
@@ -96,7 +96,7 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
                 break
         }
         
-        lbResult.text = String(format: "%.2f", distanceConverted)
+        lbResult.text = distanceConverted
     }
     
 }

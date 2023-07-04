@@ -83,10 +83,10 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         }
         
         let temperatureTyped = Double(temperature)
-        var temperatureConverted: Double = 0;
+        var temperatureConverted: String = ""
         
-        let a = pickerTemperature.selectedRow(inComponent: 0)
-        switch a {
+        let index = pickerTemperature.selectedRow(inComponent: 0)
+        switch index {
         case 0:
             temperatureConverted = TemperatureService.celisusToFahrenheit(temperature: temperatureTyped ?? 0)
             break
@@ -99,7 +99,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
             break
         }
         
-        lbResult.text = String(format: "%.2f", temperatureConverted)
+        lbResult.text = temperatureConverted
     }
     
 }
