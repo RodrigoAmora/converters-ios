@@ -10,7 +10,11 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    enum AppShortCutKey: String{
+        case temperatureKey = "temperatureKey"
+        case distanceKey = "distanceKey"
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -18,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        self.createUITabBarItem()
+        self.createUITabBarItem(selectedIndex: 0)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -51,8 +55,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
+    
+    func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if let tipo = AppShortCutKey(rawValue: shortcutItem.type) {
+            switch tipo {
+                case .temperatureKey:
+                    createUITabBarItem(selectedIndex: 0)
+                break
 
-    private func createUITabBarItem() {
+                case .distanceKey:
+                    createUITabBarItem(selectedIndex: 1)
+                break
+            }
+        }
+    }
+    
+    private func createUITabBarItem(selectedIndex: Int) {
         let temperatueTabItem = UITabBarItem()
         temperatueTabItem.title = String(localized: "temperature")
         temperatueTabItem.image = UIImage(named: "icon-home")
@@ -69,7 +87,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [temperatureViewController, distanceViewController]
-        tabBarController.selectedViewController = temperatureViewController
+        
+        switch(selectedIndex) {
+            case 0:
+                tabBarController.selectedViewController = temperatureViewController
+                break
+
+            case 1:
+                tabBarController.selectedViewController = distanceViewController
+                break
+
+            default:
+                tabBarController.selectedViewController = temperatureViewController
+                break
+        }
+        
         
         let navigationController = UINavigationController(rootViewController: tabBarController)
         navigationController.navigationBar.isHidden = true
