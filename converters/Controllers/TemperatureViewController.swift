@@ -25,9 +25,6 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("TemperatureViewController")
-        
         self.initViews()
         self.configureRightBarButtonItem()
     }
