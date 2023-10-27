@@ -10,6 +10,10 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    func changeViewControllerWithPresent(_ viewController: UIViewController) {
+        self.present(viewController, animated: true)
+    }
+    
     func changeTab(_ selectedIndex: Int) {
         tabBarController?.selectedIndex = selectedIndex
     }
