@@ -11,7 +11,6 @@ import UIKit
 class BaseViewController: UIViewController {
     
     func changeTab(_ selectedIndex: Int) {
-//        self.navigationController?.pushViewController(viewController, animated: true)
         tabBarController?.selectedIndex = selectedIndex
     }
     
