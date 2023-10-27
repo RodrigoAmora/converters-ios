@@ -88,8 +88,12 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
             self.changeTab(1)
         }
         
+        let about = UIAction(title: String(localized: "menu_aboout"), image: UIImage(systemName: "info.circle.fill")) { _ in
+            self.changeViewControllerWithPresent(AboutViewController())
+        }
+        
         self.btRightMenu.image = UIImage(systemName: "text.justify")
-        self.btRightMenu.menu = UIMenu(title: "", children: [temperature, distance])
+        self.btRightMenu.menu = UIMenu(title: "", children: [temperature, distance, about])
         
         self.navBar.topItem?.title = String(localized: "app_name")
         self.navBar.backgroundColor = UIColor.blue
