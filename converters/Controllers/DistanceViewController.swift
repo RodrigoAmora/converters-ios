@@ -26,6 +26,7 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initViews()
+        self.configureDelegates()
         self.configureRightBarButtonItem()
     }
     
@@ -45,14 +46,23 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     
     // MARK: - Methods
     private func initViews() {
-        btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
+        self.btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
+        self.btConvertDistance.overrideUserInterfaceStyle = .light
         
-        inputDistance.placeholder = String(localized: "type_distance")
-        lbAskDistance.text = String(localized: "convert_distance")
-        lbResult.text = ""
+        self.inputDistance.placeholder = String(localized: "type_distance")
+        self.inputDistance.keyboardType = .numbersAndPunctuation
+        self.inputDistance.overrideUserInterfaceStyle = .light
         
-        pickerDistance.delegate = self as UIPickerViewDelegate
-        pickerDistance.dataSource = self as UIPickerViewDataSource
+        self.lbAskDistance.text = String(localized: "convert_distance")
+        self.lbAskDistance.overrideUserInterfaceStyle = .light
+        
+        self.lbResult.text = ""
+        self.lbResult.overrideUserInterfaceStyle = .light
+    }
+    
+    private func configureDelegates () {
+        self.pickerDistance.delegate = self as UIPickerViewDelegate
+        self.pickerDistance.dataSource = self as UIPickerViewDataSource
     }
     
     private func configureRightBarButtonItem() {

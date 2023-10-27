@@ -26,6 +26,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initViews()
+        self.configureDelegates()
         self.configureRightBarButtonItem()
     }
     
@@ -45,14 +46,25 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     
     // MARK: - Methods
     private func initViews() {
-        btConvertTemperature.setTitle(String(localized: "btn_convert_temperature"), for: .normal)
+        self.btConvertTemperature.setTitle(String(localized: "btn_convert_temperature"), for: .normal)
+        self.btConvertTemperature.overrideUserInterfaceStyle = .light
         
-        inputTemperature.placeholder = String(localized: "type_temperature")
-        lbAskTemperature.text = String(localized: "convert_temperature")
-        lbResult.text = ""
+        self.lbAskTemperature.text = String(localized: "convert_temperature")
+        self.lbAskTemperature.overrideUserInterfaceStyle = .light
         
-        pickerTemperature.delegate = self as UIPickerViewDelegate
-        pickerTemperature.dataSource = self as UIPickerViewDataSource
+        self.inputTemperature.placeholder = String(localized: "type_temperature")
+        self.inputTemperature.keyboardType = .numbersAndPunctuation
+        self.inputTemperature.overrideUserInterfaceStyle = .light
+        
+        self.lbResult.text = ""
+        self.lbResult.overrideUserInterfaceStyle = .light
+        
+        self.pickerTemperature.overrideUserInterfaceStyle = .light
+    }
+    
+    private func configureDelegates () {
+        self.pickerTemperature.delegate = self as UIPickerViewDelegate
+        self.pickerTemperature.dataSource = self as UIPickerViewDataSource
     }
     
     private func configureRightBarButtonItem() {
