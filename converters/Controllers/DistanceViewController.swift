@@ -30,17 +30,18 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         self.configureRightBarButtonItem()
     }
     
-    // MARK: - UIPicker
+    // MARK: - UIPickerViewDelegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    // MARK: - UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataArray.count
+        return self.dataArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = dataArray[row]
+        let row = self.dataArray[row]
         return row
     }
     
@@ -74,11 +75,11 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
             self.changeTab(1)
         }
         
-        btRightMenu.image = UIImage(systemName: "text.justify")
-        btRightMenu.menu = UIMenu(title: "", children: [temperature, distance])
+        self.btRightMenu.image = UIImage(systemName: "text.justify")
+        self.btRightMenu.menu = UIMenu(title: "", children: [temperature, distance])
         
-        navBar.topItem?.title = String(localized: "app_name")
-        navBar.backgroundColor = UIColor.blue
+        self.navBar.topItem?.title = String(localized: "app_name")
+        self.navBar.backgroundColor = UIColor.blue
     }
     
     // MARK: - IBActions
@@ -106,7 +107,6 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
                 break
         }
         
-        lbResult.text = distanceConverted
+        self.lbResult.text = distanceConverted
     }
-    
 }
