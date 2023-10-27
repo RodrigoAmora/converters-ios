@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
@@ -45,6 +45,15 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         return row
     }
     
+    // MARK: - UITextFieldDelegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let aSet = NSCharacterSet(charactersIn:"0123456789.,-").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        
+        return string == numberFiltered
+    }
+    
     // MARK: - Methods
     private func initViews() {
         self.btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
@@ -64,6 +73,8 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     private func configureDelegates () {
         self.pickerDistance.delegate = self as UIPickerViewDelegate
         self.pickerDistance.dataSource = self as UIPickerViewDataSource
+        
+        self.inputDistance.delegate = self
     }
     
     private func configureRightBarButtonItem() {

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
@@ -45,6 +45,15 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         return row
     }
     
+    // MARK: - UITextFieldDelegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let aSet = NSCharacterSet(charactersIn:"0123456789.,-").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        
+        return string == numberFiltered
+    }
+    
     // MARK: - Methods
     private func initViews() {
         self.btConvertTemperature.setTitle(String(localized: "btn_convert_temperature"), for: .normal)
@@ -66,6 +75,8 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     private func configureDelegates () {
         self.pickerTemperature.delegate = self as UIPickerViewDelegate
         self.pickerTemperature.dataSource = self as UIPickerViewDataSource
+        
+        self.inputTemperature.delegate = self
     }
     
     private func configureRightBarButtonItem() {
