@@ -11,6 +11,7 @@
 "btn_alert_view_negative" = "Cancelar";
 
 // MENU
+"menu_aboout" = "Sobre";
 "menu_convert_temperatue" = "Converter temperatura";
 "menu_convert_distance" = "Converter distância";
 
