@@ -101,6 +101,8 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     
     // MARK: - IBActions
     @IBAction func convertTemperature() {
+        self.hideKeyboard()
+        
         let temperature = inputTemperature.text ?? ""
         if (temperature.isEmpty) {
             showAlertController(title: "", message: String(localized: "temperature_empty"))

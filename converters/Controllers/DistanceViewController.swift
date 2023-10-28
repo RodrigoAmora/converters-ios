@@ -63,6 +63,8 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         self.inputDistance.keyboardType = .numbersAndPunctuation
         self.inputDistance.overrideUserInterfaceStyle = .light
         
+        self.pickerDistance.overrideUserInterfaceStyle = .light
+        
         self.lbAskDistance.text = String(localized: "convert_distance")
         self.lbAskDistance.overrideUserInterfaceStyle = .light
         
@@ -99,6 +101,8 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     
     // MARK: - IBActions
     @IBAction func convertTemperature() {
+        self.hideKeyboard()
+        
         let distance = inputDistance.text ?? ""
         if (distance.isEmpty) {
             showAlertController(title: "", message: String(localized: "distance_empty"))
