@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="converters" customModuleProvider="target">
             <connections>
                 <outlet property="lbCreatedBy" destination="57Y-1A-653" id="mu9-li-Hk6"/>
-                <outlet property="lbEmail" destination="ljG-2u-oNa" id="ogk-1w-1jm"/>
-                <outlet property="lbName" destination="pen-5G-d22" id="snl-rG-qJv"/>
+                <outlet property="lbEmail" destination="pen-5G-d22" id="snl-rG-qJv"/>
+                <outlet property="lbVersion" destination="ljG-2u-oNa" id="ogk-1w-1jm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
