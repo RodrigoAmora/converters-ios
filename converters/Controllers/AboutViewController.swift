@@ -7,12 +7,12 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AboutViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var lbCreatedBy: UILabel!
-    @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbEmail: UILabel!
+    @IBOutlet weak var lbVersion: UILabel!
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -23,7 +23,12 @@ class AboutViewController: UIViewController {
     // MARK: - Methods
     private func initViews() {
         self.lbCreatedBy.text = String(localized: "created_by")
-        self.lbName.text = String(localized: "created_by_name")
         self.lbEmail.text = String(localized: "created_by_email")
+        self.lbVersion.text = self.getVersionAppString()
+    }
+    
+    private func getVersionAppString() -> String {
+        let version = self.getVersionApp() ?? ""
+        return "\(String(localized: "created_by_version")) \(version)"
     }
 }
