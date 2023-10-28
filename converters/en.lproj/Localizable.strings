@@ -40,6 +40,6 @@
 "type_distance" = "Type distance....";
 
 // ABOUT
-"created_by" = "Created by:";
-"created_by_name" = "Rodrigo Amora";
-"created_by_email" = "rodrigo.amora.freitas@gmail.com";
+"created_by" = "Created by Rodrigo Amora";
+"created_by_email" = "E-mail: rodrigo.amora.freitas@gmail.com";
+"created_by_version" = "Version:";
