@@ -18,6 +18,15 @@ class BaseViewController: UIViewController {
         tabBarController?.selectedIndex = selectedIndex
     }
     
+    func getVersionApp() -> String? {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        return appVersion
+    }
+    
+    func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
     func showAlertController(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String(localized: "btn_alert_view_positive"), style: .default, handler: nil))
