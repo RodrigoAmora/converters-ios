@@ -9,12 +9,23 @@ import Foundation
 
 class DistanceViewModel {
     
-    func kilometerToMile(_ distance: Double) -> String {
-        return DistanceService.kilometerToMile(distance ?? 0)
+    // MARK: - Atributes
+    private var viewDelegate: ViewDelegate
+    
+    // MARK: - init
+    init(viewDelegate: ViewDelegate) {
+        self.viewDelegate = viewDelegate
     }
     
-    func mileToKilometer(_ distance: Double) -> String {
-        return DistanceService.mileToKilometer(distance ?? 0)
+    // MARK: - Methods
+    func kilometerToMile(_ distance: Double) {
+        let distanceConverted = DistanceService.kilometerToMile(distance ?? 0)
+        self.viewDelegate.updateView(result: distanceConverted)
+    }
+    
+    func mileToKilometer(_ distance: Double) {
+        let distanceConverted = DistanceService.mileToKilometer(distance ?? 0)
+        self.viewDelegate.updateView(result: distanceConverted)
     }
     
 }

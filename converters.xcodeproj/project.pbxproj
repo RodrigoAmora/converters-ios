@@ -31,6 +31,7 @@
 		D2681BAF2AEB8A9600F3074E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2681BAD2AEB8A9600F3074E /* AboutViewController.xib */; };
 		D29099B02A4D5EAD00C14F34 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */; };
 		D29099B42A4D5F6D00C14F34 /* TemperatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */; };
+		D2AE6D432AF1B3A2009B00A5 /* ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AE6D422AF1B3A2009B00A5 /* ViewDelegate.swift */; };
 		D2FBF0062A455A760048C166 /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF0052A455A760048C166 /* DistanceViewController.xib */; };
 		D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBF0072A455AB40048C166 /* DistanceViewController.swift */; };
 		D2FBF0092A455AFD0048C166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF00B2A455AFD0048C166 /* Localizable.strings */; };
@@ -86,6 +87,7 @@
 		D2681BAD2AEB8A9600F3074E /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemperatureViewController.xib; sourceTree = "<group>"; };
+		D2AE6D422AF1B3A2009B00A5 /* ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
 		D2ED5A772A50AAB4001F4EE0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D2FBF0052A455A760048C166 /* DistanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
 		D2FBF0072A455AB40048C166 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
@@ -208,11 +210,11 @@
 		D26211C52A2E9A5E0095831F /* converters */ = {
 			isa = PBXGroup;
 			children = (
-				D2AE6D412AF1B363009B00A5 /* Delegate */,
 				D21FA6AF2A4F19E8006921F9 /* AppDelegate */,
 				D26211D22A2E9A5E0095831F /* Assets.xcassets */,
 				D220156C2A39889B00D4C037 /* Controllers */,
 				D26211CF2A2E9A5E0095831F /* converters.xcdatamodeld */,
+				D2AE6D412AF1B363009B00A5 /* Delegate */,
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D2FBF00B2A455AFD0048C166 /* Localizable.strings */,
 				D220156E2A3988C900D4C037 /* Services */,
@@ -244,6 +246,7 @@
 		D2AE6D412AF1B363009B00A5 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				D2AE6D422AF1B3A2009B00A5 /* ViewDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AE6D432AF1B3A2009B00A5 /* ViewDelegate.swift in Sources */,
 				D26211CB2A2E9A5E0095831F /* ViewController.swift in Sources */,
 				D26211C72A2E9A5E0095831F /* AppDelegate.swift in Sources */,
 				D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */,

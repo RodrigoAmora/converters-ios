@@ -20,7 +20,7 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
-    private lazy var viewModel: DistanceViewModel = DistanceViewModel()
+    private lazy var viewModel: DistanceViewModel = DistanceViewModel(viewDelegate: self)
     private let dataArray = [String(localized: "kilometer_to_mile"), String(localized: "mile_to_kilometer")]
     
     // MARK: - View life cycle
@@ -111,22 +111,26 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         }
         
         let distanceTyped = Double(distance)
-        var distanceConverted: String = ""
         
         let index = self.pickerDistance.selectedRow(inComponent: 0)
         switch index {
             case 0:
-                distanceConverted = self.viewModel.kilometerToMile(distanceTyped ?? 0)
+                self.viewModel.kilometerToMile(distanceTyped ?? 0)
                 break
             
             case 1:
-                distanceConverted = self.viewModel.mileToKilometer(distanceTyped ?? 0)
+                self.viewModel.mileToKilometer(distanceTyped ?? 0)
                 break
             
             default:
                 break
         }
-        
-        self.lbResult.text = distanceConverted
+    }
+}
+
+// MARK: - ViewDelegate
+extension DistanceViewController: ViewDelegate {
+    func updateView(result: String) {
+        self.lbResult.text = result
     }
 }

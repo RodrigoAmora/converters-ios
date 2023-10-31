@@ -9,12 +9,23 @@ import Foundation
 
 class TemperatureViewModel {
     
-    func celisusToFahrenheit(_ temperature: Double) -> String {
-        return TemperatureService.celisusToFahrenheit(temperature: temperature ?? 0)
+    // MARK: - Atributes
+    private var viewDelegate: ViewDelegate
+    
+    // MARK: - init
+    init(viewDelegate: ViewDelegate) {
+        self.viewDelegate = viewDelegate
     }
     
-    func fahrenheitToCelsius(_ temperature: Double) -> String {
-        return TemperatureService.fahrenheitToCelsius(temperature: temperature ?? 0)
+    // MARK: - Methods
+    func celisusToFahrenheit(_ temperature: Double) {
+        let temperatureConverted = TemperatureService.celisusToFahrenheit(temperature: temperature ?? 0)
+        self.viewDelegate.updateView(result: temperatureConverted)
+    }
+    
+    func fahrenheitToCelsius(_ temperature: Double) {
+        let temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: temperature ?? 0)
+        self.viewDelegate.updateView(result: temperatureConverted)
     }
     
 }

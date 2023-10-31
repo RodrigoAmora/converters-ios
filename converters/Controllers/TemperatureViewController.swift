@@ -20,7 +20,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
-    private lazy var viewModel: TemperatureViewModel = TemperatureViewModel()
+    private lazy var viewModel: TemperatureViewModel = TemperatureViewModel(viewDelegate: self)
     private let dataArray = [String(localized: "celsius_to_fahrenheit"), String(localized: "fahrenheit_to_celsius")]
     
     // MARK: - View life cycle
@@ -111,23 +111,27 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         }
         
         let temperatureTyped = Double(temperature)
-        var temperatureConverted: String = ""
         
         let index = pickerTemperature.selectedRow(inComponent: 0)
         switch index {
         case 0:
-            temperatureConverted = self.viewModel.celisusToFahrenheit(temperatureTyped ?? 0)
+            self.viewModel.celisusToFahrenheit(temperatureTyped ?? 0)
             break
             
         case 1:
-            temperatureConverted = self.viewModel.fahrenheitToCelsius(temperatureTyped ?? 0)
+            self.viewModel.fahrenheitToCelsius(temperatureTyped ?? 0)
             break
             
         default:
             break
         }
-        
-        self.lbResult.text = temperatureConverted
     }
     
+}
+
+// MARK: - ViewDelegate
+extension TemperatureViewController: ViewDelegate {
+    func updateView(result: String) {
+        self.lbResult.text = result
+    }
 }
