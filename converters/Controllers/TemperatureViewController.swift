@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class TemperatureViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
@@ -31,30 +31,6 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         self.configureRightBarButtonItem()
     }
     
-    // MARK: - UIPickerViewDelegate
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // MARK: - UIPickerViewDataSource
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.dataArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = self.dataArray[row]
-        return row
-    }
-    
-    // MARK: - UITextFieldDelegate
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let aSet = NSCharacterSet(charactersIn:"0123456789.,-").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        
-        return string == numberFiltered
-    }
-    
     // MARK: - Methods
     private func initViews() {
         self.btConvertTemperature.setTitle(String(localized: "btn_convert_temperature"), for: .normal)
@@ -74,8 +50,8 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     }
     
     private func configureDelegates() {
-        self.pickerTemperature.delegate = self as UIPickerViewDelegate
-        self.pickerTemperature.dataSource = self as UIPickerViewDataSource
+        self.pickerTemperature.delegate = self
+        self.pickerTemperature.dataSource = self
         
         self.inputTemperature.delegate = self
     }
@@ -127,6 +103,37 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+}
+
+// MARK: - UIPickerViewDelegate
+extension TemperatureViewController: UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+}
+
+// MARK: - UIPickerViewDataSource
+extension TemperatureViewController: UIPickerViewDataSource {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.dataArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let row = self.dataArray[row]
+        return row
+    }
+}
+
+
+// MARK: - UITextFieldDelegate
+extension TemperatureViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let aSet = NSCharacterSet(charactersIn:"0123456789.,-").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        
+        return string == numberFiltered
+    }
 }
 
 // MARK: - ViewDelegate

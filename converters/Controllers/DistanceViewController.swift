@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class DistanceViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var btRightMenu: UIBarButtonItem!
@@ -31,30 +31,6 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         self.configureRightBarButtonItem()
     }
     
-    // MARK: - UIPickerViewDelegate
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // MARK: - UIPickerViewDataSource
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.dataArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = self.dataArray[row]
-        return row
-    }
-    
-    // MARK: - UITextFieldDelegate
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let aSet = NSCharacterSet(charactersIn:"0123456789.,-").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        
-        return string == numberFiltered
-    }
-    
     // MARK: - Methods
     private func initViews() {
         self.btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
@@ -74,8 +50,8 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     }
     
     private func configureDelegates() {
-        self.pickerDistance.delegate = self as UIPickerViewDelegate
-        self.pickerDistance.dataSource = self as UIPickerViewDataSource
+        self.pickerDistance.delegate = self
+        self.pickerDistance.dataSource = self
         
         self.inputDistance.delegate = self
     }
@@ -127,6 +103,38 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         }
     }
 }
+
+// MARK: - UIPickerViewDelegate
+extension DistanceViewController: UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+}
+
+// MARK: - UIPickerViewDataSource
+extension DistanceViewController: UIPickerViewDataSource {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.dataArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let row = self.dataArray[row]
+        return row
+    }
+}
+
+
+// MARK: - UITextFieldDelegate
+extension DistanceViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let aSet = NSCharacterSet(charactersIn:"0123456789.,-").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        
+        return string == numberFiltered
+    }
+}
+
 
 // MARK: - ViewDelegate
 extension DistanceViewController: ViewDelegate {
