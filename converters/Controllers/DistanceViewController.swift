@@ -20,7 +20,8 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
-    let dataArray = [String(localized: "kilometer_to_mile"), String(localized: "mile_to_kilometer")]
+    private lazy var viewModel: DistanceViewModel = DistanceViewModel()
+    private let dataArray = [String(localized: "kilometer_to_mile"), String(localized: "mile_to_kilometer")]
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -72,7 +73,7 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
         self.lbResult.overrideUserInterfaceStyle = .light
     }
     
-    private func configureDelegates () {
+    private func configureDelegates() {
         self.pickerDistance.delegate = self as UIPickerViewDelegate
         self.pickerDistance.dataSource = self as UIPickerViewDataSource
         
@@ -103,23 +104,23 @@ class DistanceViewController: BaseViewController, UIPickerViewDelegate, UIPicker
     @IBAction func convertTemperature() {
         self.hideKeyboard()
         
-        let distance = inputDistance.text ?? ""
+        let distance = self.inputDistance.text ?? ""
         if (distance.isEmpty) {
-            showAlertController(title: "", message: String(localized: "distance_empty"))
+            self.showAlertController(title: "", message: String(localized: "distance_empty"))
             return
         }
         
         let distanceTyped = Double(distance)
         var distanceConverted: String = ""
         
-        let index = pickerDistance.selectedRow(inComponent: 0)
+        let index = self.pickerDistance.selectedRow(inComponent: 0)
         switch index {
             case 0:
-                distanceConverted = DistanceService.kilometerToMile(distanceTyped ?? 0)
+                distanceConverted = self.viewModel.kilometerToMile(distanceTyped ?? 0)
                 break
             
             case 1:
-                distanceConverted = DistanceService.mileToKilometer(distanceTyped ?? 0)
+                distanceConverted = self.viewModel.mileToKilometer(distanceTyped ?? 0)
                 break
             
             default:
