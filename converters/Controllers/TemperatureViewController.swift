@@ -20,7 +20,8 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
-    let dataArray = [String(localized: "celsius_to_fahrenheit"), String(localized: "fahrenheit_to_celsius")]
+    private lazy var viewModel: TemperatureViewModel = TemperatureViewModel()
+    private let dataArray = [String(localized: "celsius_to_fahrenheit"), String(localized: "fahrenheit_to_celsius")]
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -37,11 +38,11 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
     
     // MARK: - UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataArray.count
+        return self.dataArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = dataArray[row]
+        let row = self.dataArray[row]
         return row
     }
     
@@ -72,7 +73,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         self.pickerTemperature.overrideUserInterfaceStyle = .light
     }
     
-    private func configureDelegates () {
+    private func configureDelegates() {
         self.pickerTemperature.delegate = self as UIPickerViewDelegate
         self.pickerTemperature.dataSource = self as UIPickerViewDataSource
         
@@ -105,7 +106,7 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         
         let temperature = inputTemperature.text ?? ""
         if (temperature.isEmpty) {
-            showAlertController(title: "", message: String(localized: "temperature_empty"))
+            self.showAlertController(title: "", message: String(localized: "temperature_empty"))
             return
         }
         
@@ -115,11 +116,11 @@ class TemperatureViewController: BaseViewController, UIPickerViewDelegate, UIPic
         let index = pickerTemperature.selectedRow(inComponent: 0)
         switch index {
         case 0:
-            temperatureConverted = TemperatureService.celisusToFahrenheit(temperature: temperatureTyped ?? 0)
+            temperatureConverted = self.viewModel.celisusToFahrenheit(temperatureTyped ?? 0)
             break
             
         case 1:
-            temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: temperatureTyped ?? 0)
+            temperatureConverted = self.viewModel.fahrenheitToCelsius(temperatureTyped ?? 0)
             break
             
         default:
