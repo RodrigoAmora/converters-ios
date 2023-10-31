@@ -128,6 +128,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D20F6AE32AF08BE100BFF428 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D21FA6AF2A4F19E8006921F9 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +209,7 @@
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D2FBF00B2A455AFD0048C166 /* Localizable.strings */,
 				D220156E2A3988C900D4C037 /* Services */,
+				D20F6AE32AF08BE100BFF428 /* ViewModel */,
 				D220156D2A3988B600D4C037 /* Views */,
 			);
 			path = converters;
