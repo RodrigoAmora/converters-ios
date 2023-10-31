@@ -208,6 +208,7 @@
 		D26211C52A2E9A5E0095831F /* converters */ = {
 			isa = PBXGroup;
 			children = (
+				D2AE6D412AF1B363009B00A5 /* Delegate */,
 				D21FA6AF2A4F19E8006921F9 /* AppDelegate */,
 				D26211D22A2E9A5E0095831F /* Assets.xcassets */,
 				D220156C2A39889B00D4C037 /* Controllers */,
@@ -238,6 +239,13 @@
 				D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */,
 			);
 			path = convertersUITests;
+			sourceTree = "<group>";
+		};
+		D2AE6D412AF1B363009B00A5 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		F7606799CD77206E66D460F3 /* Pods */ = {
