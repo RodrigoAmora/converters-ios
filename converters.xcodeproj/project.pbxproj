@@ -228,8 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				D26211E02A2E9A5E0095831F /* convertersTests.swift */,
-				D24D4B712A54FA98007A278A /* TemperatureTests.swift */,
 				D24D4B732A54FB09007A278A /* DistanceTest.swift */,
+				D24D4B712A54FA98007A278A /* TemperatureTests.swift */,
 			);
 			path = convertersTests;
 			sourceTree = "<group>";
