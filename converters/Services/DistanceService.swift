@@ -10,11 +10,11 @@ import Foundation
 class DistanceService {
     class func kilometerToMile(_ distance: Double) -> String {
         let distanceConverted = distance * 0.621371
-        return String(format: "%.2f mi", distanceConverted)
+        return "\(distanceConverted.formatNumberToDecimal()) mi"
     }
     
     class func mileToKilometer(_ distance: Double) -> String {
         let distanceConverted = distance * 1.609344
-        return String(format: "%.2f km", distanceConverted)
+        return "\(distanceConverted.formatNumberToDecimal()) km"
     }
 }

@@ -10,6 +10,8 @@
 "btn_alert_view_positive" = "OK";
 "btn_alert_view_negative" = "Cancelar";
 
+"undefined_value" = "Valor indefinido";
+
 // MENU
 "menu_aboout" = "Sobre";
 "menu_convert_temperatue" = "Converter temperatura";
