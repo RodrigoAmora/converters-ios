@@ -19,12 +19,12 @@ class DistanceViewModel {
     
     // MARK: - Methods
     func kilometerToMile(_ distance: Double) {
-        let distanceConverted = DistanceService.kilometerToMile(distance ?? 0)
+        let distanceConverted = DistanceService.kilometerToMile(distance)
         self.viewDelegate.updateView(result: distanceConverted)
     }
     
     func mileToKilometer(_ distance: Double) {
-        let distanceConverted = DistanceService.mileToKilometer(distance ?? 0)
+        let distanceConverted = DistanceService.mileToKilometer(distance)
         self.viewDelegate.updateView(result: distanceConverted)
     }
     

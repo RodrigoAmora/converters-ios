@@ -19,12 +19,12 @@ class TemperatureViewModel {
     
     // MARK: - Methods
     func celisusToFahrenheit(_ temperature: Double) {
-        let temperatureConverted = TemperatureService.celisusToFahrenheit(temperature: temperature ?? 0)
+        let temperatureConverted = TemperatureService.celisusToFahrenheit(temperature: temperature)
         self.viewDelegate.updateView(result: temperatureConverted)
     }
     
     func fahrenheitToCelsius(_ temperature: Double) {
-        let temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: temperature ?? 0)
+        let temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: temperature)
         self.viewDelegate.updateView(result: temperatureConverted)
     }
     
