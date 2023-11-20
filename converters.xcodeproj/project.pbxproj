@@ -181,8 +181,8 @@
 		D220156E2A3988C900D4C037 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D220156F2A3988F000D4C037 /* TemperatureService.swift */,
 				D2148F9E2A4D50D4008941C0 /* DistanceService.swift */,
+				D220156F2A3988F000D4C037 /* TemperatureService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -220,12 +220,12 @@
 		D26211C52A2E9A5E0095831F /* converters */ = {
 			isa = PBXGroup;
 			children = (
-				D25108482B0BE041000D58CA /* Extensions */,
 				D21FA6AF2A4F19E8006921F9 /* AppDelegate */,
 				D26211D22A2E9A5E0095831F /* Assets.xcassets */,
 				D220156C2A39889B00D4C037 /* Controllers */,
 				D26211CF2A2E9A5E0095831F /* converters.xcdatamodeld */,
 				D2AE6D412AF1B363009B00A5 /* Delegate */,
+				D25108482B0BE041000D58CA /* Extensions */,
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D2FBF00B2A455AFD0048C166 /* Localizable.strings */,
 				D220156E2A3988C900D4C037 /* Services */,
