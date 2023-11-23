@@ -22,15 +22,15 @@ final class DistanceTest: XCTestCase {
         let distanceConverted = DistanceService.kilometerToMile(1)
         let distanceConverted2 = DistanceService.kilometerToMile(20)
         
-        XCTAssertEqual("0.62 mi", distanceConverted)
-        XCTAssertEqual("12.43 mi", distanceConverted2)
+        XCTAssertEqual("0,62 mi", distanceConverted)
+        XCTAssertEqual("12,43 mi", distanceConverted2)
     }
 
     func testConveterMileToKilometer() {
         let distanceConverted = DistanceService.mileToKilometer(1)
         let distanceConverted2 = DistanceService.mileToKilometer(20)
         
-        XCTAssertEqual("1.61 km", distanceConverted)
-        XCTAssertEqual("32.19 km", distanceConverted2)
+        XCTAssertEqual("1,61 km", distanceConverted)
+        XCTAssertEqual("32,19 km", distanceConverted2)
     }
 }
