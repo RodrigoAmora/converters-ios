@@ -27,10 +27,10 @@ final class TemperatureTests: XCTestCase {
     }
 
     func testsConverterFahrenheitToCelsius() {
-        let temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: 50)
+        let temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: 32)
         let temperatureConverted2 = TemperatureService.fahrenheitToCelsius(temperature: 100)
         
-        XCTAssertEqual("10 ºC", temperatureConverted)
+        XCTAssertEqual("0 ºC", temperatureConverted)
         XCTAssertEqual("37,78 ºC", temperatureConverted2)
     }
     
@@ -44,9 +44,9 @@ final class TemperatureTests: XCTestCase {
     
     func testsConverterFahrenheitToCelsiusWithNegativeTemperature() {
         let temperatureConverted = TemperatureService.fahrenheitToCelsius(temperature: -22)
-        let temperatureConverted2 = TemperatureService.fahrenheitToCelsius(temperature: -100)
+        let temperatureConverted2 = TemperatureService.fahrenheitToCelsius(temperature: -110.5)
         
         XCTAssertEqual("-30 ºC", temperatureConverted)
-        XCTAssertEqual("-73,33 ºC", temperatureConverted2)
+        XCTAssertEqual("-79,17 ºC", temperatureConverted2)
     }
 }
