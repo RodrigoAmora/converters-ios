@@ -80,7 +80,7 @@ class DistanceViewController: BaseViewController {
     @IBAction func convertTemperature() {
         self.hideKeyboard()
         
-        let distance = self.inputDistance.text ?? ""
+        let distance = self.inputDistance.text?.replacingOccurrences(of: ",", with: ".") ?? ""
         if (distance.isEmpty) {
             self.showAlertController(title: "", message: String(localized: "distance_empty"))
             return

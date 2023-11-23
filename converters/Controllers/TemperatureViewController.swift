@@ -80,7 +80,7 @@ class TemperatureViewController: BaseViewController {
     @IBAction func convertTemperature() {
         self.hideKeyboard()
         
-        let temperature = inputTemperature.text ?? ""
+        let temperature = inputTemperature.text?.replacingOccurrences(of: ",", with: ".") ?? ""
         if (temperature.isEmpty) {
             self.showAlertController(title: "", message: String(localized: "temperature_empty"))
             return
