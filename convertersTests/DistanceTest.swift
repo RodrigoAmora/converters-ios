@@ -9,7 +9,7 @@ import XCTest
 @testable import converters
 
 final class DistanceTest: XCTestCase {
-
+    // MARK: - XCTestCase Methods
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,6 +18,7 @@ final class DistanceTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    // MARK: - Test Methods
     func testConveterKilometerToMile() {
         let distanceConverted = DistanceService.kilometerToMile(1)
         let distanceConverted2 = DistanceService.kilometerToMile(20)
