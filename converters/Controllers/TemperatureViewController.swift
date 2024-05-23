@@ -33,16 +33,19 @@ class TemperatureViewController: BaseViewController {
     
     // MARK: - Methods
     private func initViews() {
+        self.btConvertTemperature.accessibilityIdentifier = "btConvert"
         self.btConvertTemperature.setTitle(String(localized: "btn_convert_temperature"), for: .normal)
         self.btConvertTemperature.overrideUserInterfaceStyle = .light
         
         self.lbAskTemperature.text = String(localized: "convert_temperature")
         self.lbAskTemperature.overrideUserInterfaceStyle = .light
         
+        self.inputTemperature.accessibilityIdentifier = "inputTemperature"
         self.inputTemperature.placeholder = String(localized: "type_temperature")
         self.inputTemperature.keyboardType = .numbersAndPunctuation
         self.inputTemperature.overrideUserInterfaceStyle = .light
         
+        self.lbResult.accessibilityIdentifier = "lbTemperatureConverted"
         self.lbResult.text = ""
         self.lbResult.overrideUserInterfaceStyle = .light
         
