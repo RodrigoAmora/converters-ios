@@ -18,6 +18,7 @@
 		D24D4B722A54FA98007A278A /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D4B712A54FA98007A278A /* TemperatureTests.swift */; };
 		D24D4B742A54FB09007A278A /* DistanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D4B732A54FB09007A278A /* DistanceTest.swift */; };
 		D251084A2B0BE08F000D58CA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25108492B0BE08F000D58CA /* DoubleExtension.swift */; };
+		D2512F7C2B0EE58C00120624 /* TemperatureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2512F7B2B0EE58C00120624 /* TemperatureUITests.swift */; };
 		D26211C72A2E9A5E0095831F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211C62A2E9A5E0095831F /* AppDelegate.swift */; };
 		D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211C82A2E9A5E0095831F /* SceneDelegate.swift */; };
 		D26211CB2A2E9A5E0095831F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211CA2A2E9A5E0095831F /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		D24D4B712A54FA98007A278A /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		D24D4B732A54FB09007A278A /* DistanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceTest.swift; sourceTree = "<group>"; };
 		D25108492B0BE08F000D58CA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		D2512F7B2B0EE58C00120624 /* TemperatureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUITests.swift; sourceTree = "<group>"; };
 		D26211C32A2E9A5E0095831F /* converters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = converters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26211C62A2E9A5E0095831F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26211C82A2E9A5E0095831F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			children = (
 				D26211EA2A2E9A5E0095831F /* convertersUITests.swift */,
 				D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */,
+				D2512F7B2B0EE58C00120624 /* TemperatureUITests.swift */,
 			);
 			path = convertersUITests;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2512F7C2B0EE58C00120624 /* TemperatureUITests.swift in Sources */,
 				D26211EB2A2E9A5E0095831F /* convertersUITests.swift in Sources */,
 				D26211ED2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift in Sources */,
 			);
