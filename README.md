@@ -1,10 +1,10 @@
 # converters-ios
-Descrição:
-----------
+Description:
+------------
 APP to convert temperature, distance, weight, etc.<br>
 This App run from iOS 15.0
 
-# Autor
+# Author
 <b>Rodrigo Amora</b>
 
 LinkedIn: https://linkedin.com/in/rodrigoamora
