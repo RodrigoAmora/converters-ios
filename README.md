@@ -4,6 +4,13 @@ Descrição:
 APP to convert temperature, distance, weight, etc.<br>
 This App run from iOS 15.0
 
+# Autor
+<b>Rodrigo Amora</b>
+
+LinkedIn: https://linkedin.com/in/rodrigoamora
+
+E-mail: rodrigo.amora.freitas@gmail.com
+
 <hr>
 
 Avaliable on App Store: <br>
