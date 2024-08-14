@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
     }
     
     func changeTab(_ selectedIndex: Int) {
-        tabBarController?.selectedIndex = selectedIndex
+        self.tabBarController?.selectedIndex = selectedIndex
     }
     
     func getVersionApp() -> String? {
@@ -33,4 +33,25 @@ class BaseViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func configureRightBarButtonItem() {
+        let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(named: "ic_temperature")) { _ in
+            self.changeTab(0)
+        }
+        
+        let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(named: "ic_distance")) { _ in
+            self.changeTab(1)
+        }
+        
+        let about = UIAction(title: String(localized: "menu_aboout"), image: UIImage(systemName: "info.circle.fill")) { _ in
+            self.changeViewControllerWithPresent(AboutViewController())
+        }
+        
+        let btRightMenu = UIBarButtonItem()
+        btRightMenu.image = UIImage(systemName: "text.justify")
+        btRightMenu.menu = UIMenu(title: "", children: [temperature, distance, about])
+        
+        self.tabBarController?.navigationController?.navigationBar.backgroundColor = .blue
+        self.tabBarController?.navigationItem.title = String(localized: "app_name")
+        self.tabBarController?.navigationItem.rightBarButtonItem = btRightMenu
+    }
 }
