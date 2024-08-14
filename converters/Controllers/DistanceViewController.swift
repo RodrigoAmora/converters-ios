@@ -11,13 +11,11 @@ import UIKit
 class DistanceViewController: BaseViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var btRightMenu: UIBarButtonItem!
     @IBOutlet weak var lbAskDistance: UILabel!
     @IBOutlet weak var inputDistance: UITextField!
     @IBOutlet weak var lbResult: UILabel!
     @IBOutlet weak var btConvertDistance: UIButton!
     @IBOutlet weak var pickerDistance: UIPickerView!
-    @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
     private lazy var viewModel: DistanceViewModel = DistanceViewModel(viewDelegate: self)
@@ -28,6 +26,9 @@ class DistanceViewController: BaseViewController {
         super.viewDidLoad()
         self.initViews()
         self.configureDelegates()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.configureRightBarButtonItem()
     }
     
@@ -54,26 +55,6 @@ class DistanceViewController: BaseViewController {
         self.pickerDistance.dataSource = self
         
         self.inputDistance.delegate = self
-    }
-    
-    private func configureRightBarButtonItem() {
-        let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(named: "ic_temperature")) { _ in
-            self.changeTab(0)
-        }
-        
-        let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(named: "ic_distance")) { _ in
-            self.changeTab(1)
-        }
-        
-        let about = UIAction(title: String(localized: "menu_aboout"), image: UIImage(systemName: "info.circle.fill")) { _ in
-            self.changeViewControllerWithPresent(AboutViewController())
-        }
-        
-        self.btRightMenu.image = UIImage(systemName: "text.justify")
-        self.btRightMenu.menu = UIMenu(title: "", children: [temperature, distance, about])
-        
-        self.navBar.topItem?.title = String(localized: "app_name")
-        self.navBar.backgroundColor = UIColor.blue
     }
     
     // MARK: - IBActions

@@ -11,13 +11,11 @@ import UIKit
 class TemperatureViewController: BaseViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var btRightMenu: UIBarButtonItem!
     @IBOutlet weak var btConvertTemperature: UIButton!
     @IBOutlet weak var inputTemperature: UITextField!
     @IBOutlet weak var lbAskTemperature: UILabel!
     @IBOutlet weak var lbResult: UILabel!
     @IBOutlet weak var pickerTemperature: UIPickerView!
-    @IBOutlet weak var navBar: UINavigationBar!
     
     // MARK: - Atributes
     private lazy var viewModel: TemperatureViewModel = TemperatureViewModel(viewDelegate: self)
@@ -28,6 +26,9 @@ class TemperatureViewController: BaseViewController {
         super.viewDidLoad()
         self.initViews()
         self.configureDelegates()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.configureRightBarButtonItem()
     }
     
@@ -57,26 +58,6 @@ class TemperatureViewController: BaseViewController {
         self.pickerTemperature.dataSource = self
         
         self.inputTemperature.delegate = self
-    }
-    
-    private func configureRightBarButtonItem() {
-        let temperature = UIAction(title: String(localized: "menu_convert_temperatue"), image: UIImage(named: "ic_temperature")) { _ in
-            self.changeTab(0)
-        }
-        
-        let distance = UIAction(title: String(localized: "menu_convert_distance"), image: UIImage(named: "ic_distance")) { _ in
-            self.changeTab(1)
-        }
-        
-        let about = UIAction(title: String(localized: "menu_aboout"), image: UIImage(systemName: "info.circle.fill")) { _ in
-            self.changeViewControllerWithPresent(AboutViewController())
-        }
-        
-        self.btRightMenu.image = UIImage(systemName: "text.justify")
-        self.btRightMenu.menu = UIMenu(title: "", children: [temperature, distance, about])
-        
-        self.navBar.topItem?.title = String(localized: "app_name")
-        self.navBar.backgroundColor = UIColor.blue
     }
     
     // MARK: - IBActions
