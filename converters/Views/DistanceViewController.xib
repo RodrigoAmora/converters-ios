@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,11 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DistanceViewController" customModule="converters" customModuleProvider="target">
             <connections>
                 <outlet property="btConvertDistance" destination="uhE-GP-GWm" id="sQk-wv-NGU"/>
-                <outlet property="btRightMenu" destination="2vV-1l-2XN" id="lO7-zt-lVV"/>
                 <outlet property="inputDistance" destination="5Ay-fh-Quz" id="ZQm-lO-d5x"/>
                 <outlet property="lbAskDistance" destination="rGG-cm-hlJ" id="van-eh-7Wl"/>
                 <outlet property="lbResult" destination="ymt-nY-qvl" id="0T2-jJ-BDW"/>
-                <outlet property="navBar" destination="u5o-4J-eF9" id="YDn-5E-gdg"/>
                 <outlet property="pickerDistance" destination="pAq-8u-ZF5" id="Mqc-Kv-S9d"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Y1v-Io-hp2"/>
             </connections>
@@ -49,15 +47,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5o-4J-eF9">
-                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Title" id="NYQ-9E-4Vd">
-                            <barButtonItem key="rightBarButtonItem" title="Item" id="2vV-1l-2XN"/>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhE-GP-GWm">
                     <rect key="frame" x="16" y="480" width="361" height="35"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>

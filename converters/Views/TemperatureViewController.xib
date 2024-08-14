@@ -11,11 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemperatureViewController" customModule="converters">
             <connections>
                 <outlet property="btConvertTemperature" destination="Lbg-6J-mCS" id="f6s-Tn-TXh"/>
-                <outlet property="btRightMenu" destination="Uvq-h1-4pL" id="tbb-Fh-24X"/>
                 <outlet property="inputTemperature" destination="j7f-oT-033" id="LCX-xJ-9ho"/>
                 <outlet property="lbAskTemperature" destination="9n5-FT-N9W" id="NKc-Aa-CW9"/>
                 <outlet property="lbResult" destination="C1V-KJ-aGX" id="6SO-ZZ-x2l"/>
-                <outlet property="navBar" destination="tkQ-VN-Mca" id="BMi-84-jnj"/>
                 <outlet property="pickerTemperature" destination="r5g-OA-zCb" id="8vd-sx-4Xc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="52o-IA-Ch2"/>
             </connections>
@@ -58,15 +56,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkQ-VN-Mca">
-                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Title" id="gUw-jT-fl0">
-                            <barButtonItem key="rightBarButtonItem" title="Item" id="Uvq-h1-4pL"/>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
