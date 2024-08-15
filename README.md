@@ -16,7 +16,7 @@ Author:
 LinkedIn: https://linkedin.com/in/rodrigoamora <br>
 E-mail: rodrigo.amora.freitas@gmail.com
 
-Accessing the projet:
----------------------
+Accessing the procjet:
+----------------------
 Avaliable on App Store: <br>
 https://apps.apple.com/us/app/rlaf-converters/id6468321913
