@@ -50,7 +50,17 @@ class BaseViewController: UIViewController {
         btRightMenu.image = UIImage(systemName: "text.justify")
         btRightMenu.menu = UIMenu(title: "", children: [temperature, distance, about])
         
-        self.tabBarController?.navigationController?.navigationBar.backgroundColor = .blue
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.blue
+        
+        let textColor = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = textColor
+        
+        self.tabBarController?.navigationController?.navigationBar.standardAppearance = appearance
+        self.tabBarController?.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        self.tabBarController?.navigationController?.navigationBar.tintColor = .white
+        
         self.tabBarController?.navigationItem.title = String(localized: "app_name")
         self.tabBarController?.navigationItem.rightBarButtonItem = btRightMenu
     }
