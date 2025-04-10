@@ -29,6 +29,7 @@
 		D26211E12A2E9A5E0095831F /* convertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211E02A2E9A5E0095831F /* convertersTests.swift */; };
 		D26211EB2A2E9A5E0095831F /* convertersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211EA2A2E9A5E0095831F /* convertersUITests.swift */; };
 		D26211ED2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */; };
+		D2639E042DA7903800BB3B23 /* AnimationsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639E032DA7903800BB3B23 /* AnimationsUtil.swift */; };
 		D2681BAE2AEB8A9600F3074E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2681BAC2AEB8A9600F3074E /* AboutViewController.swift */; };
 		D2681BAF2AEB8A9600F3074E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2681BAD2AEB8A9600F3074E /* AboutViewController.xib */; };
 		D29099B02A4D5EAD00C14F34 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */; };
@@ -87,6 +88,7 @@
 		D26211E62A2E9A5E0095831F /* convertersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = convertersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26211EA2A2E9A5E0095831F /* convertersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITests.swift; sourceTree = "<group>"; };
 		D26211EC2A2E9A5E0095831F /* convertersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2639E032DA7903800BB3B23 /* AnimationsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsUtil.swift; sourceTree = "<group>"; };
 		D2681BAC2AEB8A9600F3074E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D2681BAD2AEB8A9600F3074E /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				D26211D72A2E9A5E0095831F /* Info.plist */,
 				D2FBF00B2A455AFD0048C166 /* Localizable.strings */,
 				D220156E2A3988C900D4C037 /* Services */,
+				D2639DFD2DA78FD100BB3B23 /* Utils */,
 				D20F6AE32AF08BE100BFF428 /* ViewModel */,
 				D220156D2A3988B600D4C037 /* Views */,
 			);
@@ -255,6 +258,14 @@
 				D2512F7B2B0EE58C00120624 /* TemperatureUITests.swift */,
 			);
 			path = convertersUITests;
+			sourceTree = "<group>";
+		};
+		D2639DFD2DA78FD100BB3B23 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D2639E032DA7903800BB3B23 /* AnimationsUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D2AE6D412AF1B363009B00A5 /* Delegate */ = {
@@ -423,9 +434,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-converters-convertersUITests/Pods-converters-convertersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-converters-convertersUITests/Pods-converters-convertersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -440,9 +455,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-converters/Pods-converters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-converters/Pods-converters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2639E042DA7903800BB3B23 /* AnimationsUtil.swift in Sources */,
 				D2AE6D432AF1B3A2009B00A5 /* ViewDelegate.swift in Sources */,
 				D26211CB2A2E9A5E0095831F /* ViewController.swift in Sources */,
 				D26211C72A2E9A5E0095831F /* AppDelegate.swift in Sources */,
