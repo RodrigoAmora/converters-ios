@@ -124,5 +124,11 @@ extension TemperatureViewController: UITextFieldDelegate {
 extension TemperatureViewController: ViewDelegate {
     func updateView(result: String) {
         self.lbResult.text = result
+        
+        UIView.transition(with: self.lbResult, duration: 3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                         self.lbResult.isHidden = false
+                      })
     }
 }
