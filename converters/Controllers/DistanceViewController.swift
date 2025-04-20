@@ -40,6 +40,7 @@ class DistanceViewController: BaseViewController {
         self.inputDistance.placeholder = String(localized: "type_distance")
         self.inputDistance.keyboardType = .numbersAndPunctuation
         self.inputDistance.overrideUserInterfaceStyle = .light
+        self.inputDistance.autocorrectionType = .no
         
         self.pickerDistance.overrideUserInterfaceStyle = .light
         
@@ -58,25 +59,25 @@ class DistanceViewController: BaseViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func convertTemperature() {
+    @IBAction func convertDistance() {
         self.hideKeyboard()
         
-        let distance = self.inputDistance.text?.replacingOccurrences(of: ",", with: ".") ?? ""
-        if (distance.isEmpty) {
+        let distanceTyped = self.inputDistance.text?.replacingOccurrences(of: ",", with: ".") ?? ""
+        if (distanceTyped.isEmpty) {
             self.showAlertController(title: "", message: String(localized: "distance_empty"))
             return
         }
         
-        let distanceTyped = Double(distance)
+        let distance = Double(distanceTyped)
         
         let index = self.pickerDistance.selectedRow(inComponent: 0)
         switch index {
             case 0:
-                self.viewModel.kilometerToMile(distanceTyped ?? 0)
+                self.viewModel.kilometerToMile(distance ?? 0)
                 break
             
             case 1:
-                self.viewModel.mileToKilometer(distanceTyped ?? 0)
+                self.viewModel.mileToKilometer(distance ?? 0)
                 break
             
             default:
