@@ -120,6 +120,6 @@ extension DistanceViewController: UITextFieldDelegate {
 extension DistanceViewController: ViewDelegate {
     func updateView(result: String) {
         self.lbResult.text = result
-        AnimationsUtil.showIn(view: self.lbResult, duration: 3)
+        AnimationsUtil.flipFromBottom(view: self.lbResult, duration: 3)
     }
 }

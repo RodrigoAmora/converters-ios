@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 class AnimationsUtil {
-    class func showIn(view: UIView, duration: Double) {
+    class func flipFromBottom(view: UIView, duration: Double) {
         UIView.transition(with: view,
                           duration: duration,
-                          options: .transitionCrossDissolve,
+                          options: .transitionFlipFromBottom,
                           animations: {
                             view.isHidden = false
                           }
