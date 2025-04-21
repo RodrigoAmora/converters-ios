@@ -64,7 +64,7 @@ class DistanceViewController: BaseViewController {
         
         let distanceTyped = self.inputDistance.text?.replacingOccurrences(of: ",", with: ".") ?? ""
         if (distanceTyped.isEmpty) {
-            self.showAlertController(title: "", message: String(localized: "distance_empty"))
+            self.showAlert(title: "", message: String(localized: "distance_empty"))
             return
         }
         

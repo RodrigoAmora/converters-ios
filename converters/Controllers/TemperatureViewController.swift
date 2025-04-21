@@ -67,7 +67,7 @@ class TemperatureViewController: BaseViewController {
         
         let temperature = inputTemperature.text?.replacingOccurrences(of: ",", with: ".") ?? ""
         if (temperature.isEmpty) {
-            self.showAlertController(title: "", message: String(localized: "temperature_empty"))
+            self.showAlert(title: "", message: String(localized: "temperature_empty"))
             return
         }
         

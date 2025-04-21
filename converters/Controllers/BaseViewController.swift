@@ -27,7 +27,7 @@ class BaseViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func showAlertController(title: String, message: String) {
+    func showAlert(title: String, message: String) {
         let buttonOK = UIAlertAction(title: String(localized: "btn_alert_view_positive"), style: .default)
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
