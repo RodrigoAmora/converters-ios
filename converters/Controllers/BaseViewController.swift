@@ -28,8 +28,11 @@ class BaseViewController: UIViewController {
     }
     
     func showAlertController(title: String, message: String) {
+        let buttonOK = UIAlertAction(title: String(localized: "btn_alert_view_positive"), style: .default)
+        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: String(localized: "btn_alert_view_positive"), style: .default, handler: nil))
+        alert.addAction(buttonOK)
+        
         present(alert, animated: true, completion: nil)
     }
     
