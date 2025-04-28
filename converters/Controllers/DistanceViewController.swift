@@ -35,20 +35,15 @@ class DistanceViewController: BaseViewController {
     // MARK: - Methods
     private func initViews() {
         self.btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
-        self.btConvertDistance.overrideUserInterfaceStyle = .light
         
+        self.inputDistance.accessibilityIdentifier = "inputDistance"
         self.inputDistance.placeholder = String(localized: "type_distance")
         self.inputDistance.keyboardType = .numbersAndPunctuation
-        self.inputDistance.overrideUserInterfaceStyle = .light
         self.inputDistance.autocorrectionType = .no
         
-        self.pickerDistance.overrideUserInterfaceStyle = .light
-        
         self.lbAskDistance.text = String(localized: "convert_distance")
-        self.lbAskDistance.overrideUserInterfaceStyle = .light
         
         self.lbResult.text = ""
-        self.lbResult.overrideUserInterfaceStyle = .light
     }
     
     private func configureDelegates() {
