@@ -34,6 +34,7 @@ class DistanceViewController: BaseViewController {
     
     // MARK: - Methods
     private func initViews() {
+        self.btConvertDistance.accessibilityIdentifier = "btConvert"
         self.btConvertDistance.setTitle(String(localized: "btn_convert_distance"), for: .normal)
         
         self.inputDistance.accessibilityIdentifier = "inputDistance"
@@ -43,6 +44,7 @@ class DistanceViewController: BaseViewController {
         
         self.lbAskDistance.text = String(localized: "convert_distance")
         
+        self.lbResult.accessibilityIdentifier = "lbDistanceConverted"
         self.lbResult.text = ""
     }
     
