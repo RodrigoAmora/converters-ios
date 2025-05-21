@@ -69,16 +69,16 @@ class TemperatureViewController: BaseViewController {
         
         let index = pickerTemperature.selectedRow(inComponent: 0)
         switch index {
-        case 0:
-            self.viewModel.celisusToFahrenheit(temperatureTyped ?? 0)
-            break
-            
-        case 1:
-            self.viewModel.fahrenheitToCelsius(temperatureTyped ?? 0)
-            break
-            
-        default:
-            break
+            case 0:
+                self.viewModel.celisusToFahrenheit(temperatureTyped ?? 0)
+                break
+                
+            case 1:
+                self.viewModel.fahrenheitToCelsius(temperatureTyped ?? 0)
+                break
+                
+            default:
+                break
         }
     }
     
