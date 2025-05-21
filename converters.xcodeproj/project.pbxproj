@@ -35,6 +35,7 @@
 		D29099B02A4D5EAD00C14F34 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29099AF2A4D5EAD00C14F34 /* TemperatureViewController.swift */; };
 		D29099B42A4D5F6D00C14F34 /* TemperatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */; };
 		D2AE6D432AF1B3A2009B00A5 /* ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AE6D422AF1B3A2009B00A5 /* ViewDelegate.swift */; };
+		D2FA7B8B2DD926CF005AA37C /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA7B8A2DD926CF005AA37C /* UIExtension.swift */; };
 		D2FBF0062A455A760048C166 /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF0052A455A760048C166 /* DistanceViewController.xib */; };
 		D2FBF0082A455AB40048C166 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBF0072A455AB40048C166 /* DistanceViewController.swift */; };
 		D2FBF0092A455AFD0048C166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2FBF00B2A455AFD0048C166 /* Localizable.strings */; };
@@ -95,6 +96,7 @@
 		D29099B32A4D5F6D00C14F34 /* TemperatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemperatureViewController.xib; sourceTree = "<group>"; };
 		D2AE6D422AF1B3A2009B00A5 /* ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
 		D2ED5A772A50AAB4001F4EE0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D2FA7B8A2DD926CF005AA37C /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		D2FBF0052A455A760048C166 /* DistanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
 		D2FBF0072A455AB40048C166 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		D2FBF00A2A455AFD0048C166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		D25108482B0BE041000D58CA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D2FA7B8A2DD926CF005AA37C /* UIExtension.swift */,
 				D25108492B0BE08F000D58CA /* DoubleExtension.swift */,
 			);
 			path = Extensions;
@@ -548,6 +551,7 @@
 				D22015702A3988F000D4C037 /* TemperatureService.swift in Sources */,
 				D26211D12A2E9A5E0095831F /* converters.xcdatamodeld in Sources */,
 				D26211C92A2E9A5E0095831F /* SceneDelegate.swift in Sources */,
+				D2FA7B8B2DD926CF005AA37C /* UIExtension.swift in Sources */,
 				D22F65322A509650004BF0D0 /* BaseViewController.swift in Sources */,
 				D20F6AE52AF08C2D00BFF428 /* DistanceViewModel.swift in Sources */,
 				D29099B02A4D5EAD00C14F34 /* TemperatureViewController.swift in Sources */,
